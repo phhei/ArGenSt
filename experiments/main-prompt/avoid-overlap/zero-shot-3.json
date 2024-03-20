@@ -1,0 +1,40 @@
+{
+  "opinion_loading": {
+    "load_additional_arguments": "True",
+    "verbose": "False"
+  },
+  "instance_loading": {
+    "csv": ".out/prompts/prompts_2023_12_03/prompts_for_chat_gpt_avoid_overlap_withLimitOf2000.csv",
+    "min_dimension": "8"
+  },
+  "chatGPT": {
+    "api_key": "XXX",
+    "task_prompt": "Your task is, given a person's profile and a question, to predict the opinion of such a person regarding the question. You should reply with a stance (YES or NO) and a short single-sentence argument explaining that opinion stance from the viewpoint of that person.",
+    "model": "gpt-4-1106-preview",
+    "required_user_attributes": "1",
+    "pos_shots": "False",
+    "neg_shots": "False",
+    "text_target": "conclusion",
+    "arguments_per_instance": 3,
+    "save_to_file": ".out/prompting/main/avoid-overlap/zero-shot-3.json",
+    "additional_chat_settings": {
+        "max_tokens": 255,
+        "temperature": 0.8,
+        "top_p": 1,
+        "frequency_penalty": 0,
+        "presence_penalty": 0
+    }
+  },
+  "metrics": {
+    "calculate_topic_wise": "True",
+    "calculate_user_wise": "True",
+    "return_stance_accuracy":  "True",
+    "return_stance_f1": "True",
+    "return_stance_precision": "True",
+    "return_stance_recall": "True",
+    "return_argument_rouge": "True",
+    "return_argument_blue_score": "False",
+    "return_argument_meteor": "False",
+    "return_argument_bert_score": "True"
+   }
+}

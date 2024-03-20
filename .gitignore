@@ -1,0 +1,10 @@
+.idea/
+framework/__pycache__/
+data/debateOrg/
+pipeline/StanceClassifier/__pycache__/MainModule.cpython-39.pyc
+pipeline/StanceClassifier/submodules/combiners/__pycache__/
+pipeline/StanceClassifier/submodules/final_aggregator/__pycache__/
+pipeline/StanceClassifier/submodules/towers/__pycache__/
+pipeline/__pycache__/
+*.pt
+.out/

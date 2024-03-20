@@ -1,0 +1,12 @@
+# column number 1 represents the possible answers
+# column number 2 represents the following: income_float_values (-1 if income is very low <--> +1 if income is very high)
+$100,000 to $150,000	0.85
+$25,000 to $35,000	-0.5
+$35,000 to $50,000	-0.075
+$50,000 to $75,000	0.3
+$75,000 to $100,000	0.6
+Less than $25,000	-1.0
+More than $150,000	1.0
+Not Saying	0.0
+Other	0.0
+default	0

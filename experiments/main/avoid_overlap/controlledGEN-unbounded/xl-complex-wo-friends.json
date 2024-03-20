@@ -1,0 +1,129 @@
+{
+  "runs": 5,
+  "random_seed": 42,
+   "dataset": {
+	"header_in_data": "True",
+    "train_dev_test_splitting": [80, 10, 10],
+    "train_dev_test_splitting_format": "avoid_overlap",
+    "verbose": "False",
+    "user_values_how_many_not_null": 0,
+    "text_target": "conclusion",
+    "load_additional_arguments": "True",
+	"__comment__": "a  mainexperiment - the xl-complex size ;)"
+   },
+   "metrics": {
+    "calculate_topic_wise": "True",
+    "calculate_user_wise": "True",
+    "return_stance_accuracy":  "True",
+    "return_stance_f1": "True",
+    "return_stance_precision": "True",
+    "return_stance_recall": "True",
+    "return_argument_rouge": "True",
+    "return_argument_blue_score": "False",
+    "return_argument_meteor": "False",
+    "return_argument_bert_score": "True"
+   },
+   "training": {
+      "max_epochs": 8,
+      "early_stopping": "True",
+      "metric_keys_for_early_stopping": ["stance_F1", "BESTargument_bertscore_f1"],
+
+      "batch_size_topics": 2,
+      "batch_size_users": 4,
+      "sort_topics_by_length": "False",
+
+      "learning_rate": 2e-5,
+      "scalar_stance_classifier_loss": "2.0",
+      "scalar_argument_generator_loss": "1.0",
+      "scalar_encoder_output_shift_impact": "0.0",
+      "warmup_steps": "100",
+      "cooldown_learning_rate": "True",
+      "verbose_scheduler": "False",
+
+      "apply_optimal_stance_thresholds_on_split": "dev",
+      "generation_args_max_length": 20,
+      "generation_args_min_length": 5,
+      "generation_args_early_stopping": "False",
+      "generation_args_do_sample": "False",
+      "generation_args_num_beams": 8,
+      "generation_args_num_beam_groups": 4,
+      "generation_args_temperature": "1.",
+      "generation_args_renormalize_logits": "True",
+      "generation_args_top_p": ".9",
+      "generation_args_eta_cutoff": 4e-4,
+      "generation_args_diversity_penalty": 5e-2,
+      "generation_args_repetition_penalty": "1.1",
+      "generation_args_no_repeat_ngram_size": 3,
+      "generation_args_num_return_sequences": 5,
+      "generation_args_output_scores": "False",
+
+      "do_training": "True",
+      "do_inference_train": "False",
+      "do_inference_dev": "True",
+      "do_inference_test": "True",
+      "do_inference_every_epoch": "True",
+      "out_dir": ".out/mainexperiments/avoid_overlap/controlledGEN-unbounded/large--complex/all-MiniLM-L12-v2--wo-friendship--big-knowledge-user-prob",
+      "writing_logs": "False",
+      "writing_stats": "True",
+      "writing_predictions": "True",
+
+      "clean_checkpoints_at_end": "True",
+      "store_best_model_at_end": "True"
+   },
+   "call_module": {
+    "argument_generator_module": "t5-base",
+    "forward_user_properties_into_argument_generator": "True",
+    "stance_module": {
+      "SBERTTower": {
+        "__comment__": "tower processing the topic",
+        "used_for": "topic-text-processor",
+        "sbert_model": "all-MiniLM-L12-v2",
+        "trainable_sbert_model": "False",
+        "normalize_embeddings": "False"
+      },
+      "Linear": {
+        "__comment__": "tower processing the user properties",
+        "used_for": "user-property-processor",
+        "root_property_string_to_number_folder": "pipeline/StanceClassifier/submodules/towers/LinearUserProfileEncoderEmbeddings",
+        "returned_embedding_size": 300,
+        "normalize_embeddings": "False",
+        "hidden_layers": 3,
+        "activation_function": "TanH",
+        "dropout_rate": ".25",
+        "linear_classification_head": "True",
+        "ignored_properties": ["current_age", "last_online_age", "num_of_not_null_entries"]
+      },
+      "DeepCrossNetwork": {
+        "__comment__": "combiner of the three towers",
+        "topic_embedding_size": 384,
+        "user_id_embedding_size": 0,
+        "user_profile_embedding_size": 300,
+        "fuse_embedding_size": 150,
+        "form": "stacked",
+        "activation_function": "Sigmoid",
+        "dense_feature_appendix": 50
+      },
+      "DeepCrossNetwork-additionalOne": {
+          "__comment__": "combiner of the three towers",
+          "topic_embedding_size": 384,
+          "user_id_embedding_size": 0,
+          "user_profile_embedding_size": 300,
+          "fuse_embedding_size": 150,
+          "form": "parallel",
+          "activation_function": "Sigmoid",
+          "dense_feature_appendix": 50
+      },
+      "ShallowNeuralAggregator": {
+        "__comment__": "final classification head predicting stance and encoder-in-vector (argument generation)",
+        "encoder_size": 768,
+        "hidden_layers": 2,
+        "dropout": ".15",
+        "activation_function": "TanH"
+        },
+      "__comment__": "Further possibilities: 'MatMulLayer'/'DeepCrossNetwork'. For more degrees of freedom, consider 'ShallowNeuralAggregator', too",
+      "None": {
+        "used_for": "user-id-processor"
+      }
+      }
+    }
+}

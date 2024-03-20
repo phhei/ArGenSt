@@ -1,0 +1,12 @@
+# column number 1 represents the possible answers
+# column number 2 represents the following: relationship_float_values (-1 for no relation <-- 0 for unclear/ uncommitted relation --> +1 for fixed commited relation)
+- Private -	0.1
+Engaged	0.875
+In a Relationship	0.65
+In an Open Relationship	0.25
+It's Complicated	-0.05
+Married	0.975
+Not Saying	-0.2
+Other	0.025
+Single	-1.0
+default	0

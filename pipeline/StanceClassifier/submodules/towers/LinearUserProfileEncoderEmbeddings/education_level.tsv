@@ -1,0 +1,11 @@
+# column number 1 represents the possible answers
+# column number 2 represents the following: education_level_float_values (-1 for not educated <-- 0 for middle educated --> and +1 for high education)
+Associates Degree	0.25
+Bachelors Degree	0.5
+Graduate Degree	0.55
+High School	-0.2
+Not Saying	-0.325
+Other	-0.125
+Post Doctoral	0.925
+Some College	0.3
+default	0

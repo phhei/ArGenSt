@@ -1,0 +1,12 @@
+# column number 1 represents the possible answers
+# column number 2 represents the following: ethnicity_float_values (-1 for west longitude <-- 0 for central longitude --> and +1 for east longitude)
+# column number 3 represents the following: ethnicity_float_values (-1 for south latitude <-- 0 for central latitude --> and +1 for north latitude)
+Asian	0.875	0.4
+Black	-0.075	-0.6
+East Indian	0.725	0.425
+Latino	-0.625	-0.625
+Middle Eastern	0.325	0.4
+Native American	-0.35	0.025
+Pacific Islander	0.125	-0.35
+White	-0.075	0.4
+default	0	0

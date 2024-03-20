@@ -1,0 +1,37 @@
+# column number 1 represents the possible answers
+# column number 2 represents the following: religious_float_values (-1 for not religious <-- 0 for undecided/ no observable influence by faith --> +1 for religious)
+# column number 3 represents the following: religious_float_values (-1 for no god <-- 0 for monotheism (only one god) --> +1 for a large number of gods)
+Agnostic	0.0667	-0.3333
+Atheist	-1.0	-1.0
+Buddhist	0.7667	-0.9
+Christian	0.5	0.0
+Christian - Anglican	0.6	0.0
+Christian - Assemblies of God	0.7	0.0
+Christian - Baptist	0.6667	0.0
+Christian - Catholic	0.5667	0.0
+Christian - Church of Christ	0.6	0.0
+Christian - Episcopalian	0.5333	0.0
+Christian - Greek Orthodox	0.6667	0.0
+Christian - Latter-Day Saints	0.6667	0.2667
+Christian - Lutheran	0.5667	0.0
+Christian - Methodist	0.6	0.0
+Christian - Pentecostal	0.5667	0.0
+Christian - Presbytarian	0.5667	0.0
+Christian - Protestant	0.5333	0.0
+Christian - Seventh-Day Adventist	0.85	0.0
+Deism	0.1333	0.0
+Hindu	0.7	1.0
+Islamic	0.7	0.0
+Jewish	0.6	0.0
+Jewish - Orthodox	0.6	0.0
+Jewish - Reform	0.6	0.0
+Muslim	0.8	0.0
+Muslim - Sunni	0.8	0.0
+Neo-Paganism	0.3333	0.5
+Pagan	0.4667	0.8
+Pastafarian	-0.1	-0.4
+Scientology	0.3667	-0.3333
+Secular	-0.2667	-0.1667
+Unitarian Universalist	0.3333	-0.1333
+Wikkan	0.3333	0.3
+default	0	0

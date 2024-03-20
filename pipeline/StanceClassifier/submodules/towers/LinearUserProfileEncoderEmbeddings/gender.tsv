@@ -1,0 +1,13 @@
+# column number 1 represents the possible answers
+# column number 2 represents the following: gender_float_values (-1 for unknown/ hidden gender <-- > +1 for known gender)
+# column number 3 represents the following: gender_float_values (-1 for female <-- 0 for undecided/ something in between/ mixture --> +1 for male)
+Agender	0.5	0.0
+Androgyne	-0.25	-0.15
+Bigender	-0.4	0.0
+Female	0.5	-1.0
+Genderqueer	-0.175	0.0
+Male	1.0	1.0
+Prefer not to say	-0.5	-0.05
+Transgender Female	0.55	-0.825
+Transgender Male	0.55	0.825
+default	0	0

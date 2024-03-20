@@ -1,0 +1,30 @@
+# column number 1 represents the possible answers
+# column number 2 represents the following: working_place_float_values (-1 for is not currently working (for sure) <--> +1 for is currently working (for sure))
+# column number 3 represents the following: working_place_float_values (-1 for has no working experience/ lower-class working place <-- 0 for uncertain job positon/ standard -->  +1 for has working experience/ upper-class working place)
+# column number 4 represents the following: working_place_float_values (-1 for no system-relevant jobs <-- 0 for mediocre system-relevant jobs -->  +1 for system-relevant jobs)
+# column number 5 represents the following: working_place_float_values (-1 for pure governmental jobs <-- 0 for jobs being both governmental and economy -->  +1 for jobs in economy)
+- Private -	-0.25	-0.125	-0.2	0.175
+Administrative	0.525	0.1	0.7	-0.275
+Artist	-0.275	0.025	-0.3	0.5
+Civil Service	0.45	0.1	0.95	-0.725
+Executive	0.8	0.575	0.475	-0.2
+Financial Services	0.775	0.4	0.15	0.425
+Government	0.6	0.6	0.85	-0.975
+Hospitality	0.575	-0.25	-0.25	0.45
+Labor	0.575	-0.175	0.575	0.0
+Legal	0.85	0.625	0.425	-0.25
+Marketing	0.5	0.175	-0.575	0.675
+Medical	0.875	0.9	0.85	-0.025
+Military	0.7	0.1	0.35	-0.875
+Not Saying	0.025	-0.125	0	0.175
+Other	-0.125	-0.125	0	0.175
+Retail	0.675	-0.375	0.25	0.775
+Retired	-0.9	0.625	-0.375	-0.25
+Sales	0.725	0.0	-0.175	0.675
+Self-Employed	0.3	0.45	0.175	0.9
+Student	-0.325	-0.55	-0.125	-0.15
+Teacher	0.55	0.3	0.475	-0.8
+Technical	0.675	0.375	0.55	0.3
+Transportation	0.75	-0.5	0.8	0.275
+Travel	0.45	-0.025	-0.425	0.85
+default	0	0	0	0

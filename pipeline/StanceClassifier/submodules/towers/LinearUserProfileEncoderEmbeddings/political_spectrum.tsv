@@ -1,0 +1,23 @@
+# column number 1 represents the possible answers
+# column number 2 represents the following: political_spectrum_float_values (-1 for right-wing parties <-- 0 for centre/ balanced parties --> +1 for rather left-wing parties)
+# column number 3 represents the following: political_spectrum_float_values (-1 for small party with a non-mainstream agenda <-- 0 for a medium party (but not a big player in the political landscape) --> +1 for a major party covering the mainstream)
+American Independent Party	-0.55	-0.8
+American Nazi Party	-0.975	-0.9
+Boston Tea Party	-0.05	-0.85
+Communist Party	0.875	-0.725
+Constitution Party	-0.375	-0.65
+Democratic Party	0.225	0.975
+Democratic Socialists Party	0.325	-0.425
+Green Party	0.575	-0.35
+Independence Party	-0.225	-0.75
+Independent American Party	-0.475	-0.775
+Labor Party	0.55	-0.8
+Libertarian Party	0.2	0.075
+Marijuana Party	0.475	-0.9
+Peace and Freedom Party	0.775	-0.525
+Pirate Party	0.2	-0.825
+Reform Party	0.125	-0.775
+Republican Party	-0.475	0.975
+Socialist Party	0.825	-0.75
+Tea Party Patriots	-0.175	-0.8
+default	0	0
