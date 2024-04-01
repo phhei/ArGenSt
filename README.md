@@ -1,3 +1,3 @@
-# Ask GRANDMA: Generating Stances and Arguments for every Stakeholder Group - for each Topic
+# “Tell me who you are and I tell you how you argue”: Predicting Stances and Arguments for Stakeholder Groups
 
 Code to the paper. More infos are coming soon.
